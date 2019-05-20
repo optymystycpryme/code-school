@@ -25,3 +25,15 @@ $(document).on('turbolinks:load', function() {
   $(".scrollspy").scrollSpy();
   $(".slider").slider();
 })
+
+window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+  if (document.body.scrollTop > 850 || document.documentElement.scrollTop > 850) {
+    document.getElementById("nav-wrapper").style.padding = "35px 15px";
+    document.getElementById("brand-logo").style.fontSize = "30px";
+  } else {
+    document.getElementById("nav-wrapper").style.padding = "70px 10px";
+    document.getElementById("brand-logo").style.fontSize = "35px";
+  }
+}
